@@ -7,7 +7,7 @@ from watchdog.events import FileSystemEventHandler
 class MyHandler(FileSystemEventHandler):
     def __init__(self):
         self.last_executed = 0
-        self.debounce = 1  # Adjust the debounce time as needed (in seconds)
+        self.debounce = 0  # Adjust the debounce time as needed (in seconds)
 
     def on_modified(self, event):
         current_time = time.time()
